@@ -157,14 +157,14 @@ const Hero = () => {
                 {/* Mobile Menu */}
                 {mobileOpen && (
                     <div className="fixed inset-0 z-[95] bg-black/90 backdrop-blur-md flex flex-col items-center justify-center space-y-6 md:space-y-8 text-white transition-all duration-300">
-                        {['Services', 'Projects', 'About Us', 'Career', 'Application Form'].map((item, i) => (
+{['Services', 'Projects', 'About Us', 'Career', 'Application Form'].map((item, i) => (
                             <button
                                 key={i}
                                 onClick={() => {
                                     setMobileOpen(false);
                                     setTimeout(() => {
                                         if (item === 'Application Form') navigate('/client-application');
-                                        else if (item === 'Career') navigate('/career');
+else if (item === 'Career') navigate('/career');
                                         else {
                                             const section = document.getElementById(item.toLowerCase().replace(' ', ''));
                                             section?.scrollIntoView({ behavior: 'smooth' });
