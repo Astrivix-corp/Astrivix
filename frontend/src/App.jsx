@@ -7,6 +7,7 @@ import './App.css';
 import Services from './components/Services';
 import Projects from './components/Projects';
 import AboutUs from './components/AboutUs';
+import Career from './components/Career';
 import Bottom from './components/Bottom';
 import ClientApplication from './components/ClientApplication';
 import Privacy from './pages/Privacy';
@@ -29,6 +30,11 @@ function App() {
                 <Route path="/terms" element={
                     <div className="min-h-screen">
                         <Terms />
+                    </div>
+                } />
+                <Route path="/career" element={
+                    <div className="min-h-screen">
+                        <Career />
                     </div>
                 } />
                 <Route path="/" element={

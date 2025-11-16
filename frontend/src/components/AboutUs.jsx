@@ -90,43 +90,46 @@ export default function AboutUs() {
             ref={sectionRef}
             className="relative w-full min-h-screen bg-transparent text-white flex flex-col items-center justify-start"
         >
-            <div
-                className="relative w-full flex justify-center items-center gap-[40px] sm:gap-[120px] mt-[100px]
-             flex-wrap sm:flex-nowrap"
-            >
-                {/* Show 5 boxes on desktop, 3 on mobile */}
-                {[...Array(5)].map((_, i) => {
-                    // Desktop positions
-                    const desktopTops = [-63, 320, 120, -40, 160];
-                    // Mobile positions (adjusted for good vertical alignment)
-                    const mobileTops = [0, 40, -20, 0, 0];
-
-                    return (
-                        <div
-                            key={i}
-                            className={`rounded-xl shadow-lg relative
-                    ${i < 3 ? "block" : "hidden"} sm:block
-                    w-[100px] h-[100px] sm:w-[200px] sm:h-[200px]`}
-                            style={{
-                                top: window.innerWidth < 640 ? `${mobileTops[i]}px` : `${desktopTops[i]}px`,
-                                backgroundImage: `url("/au${i+1}-${imageIndices[i] + 1}.webp")`,
-                                backgroundSize: 'cover',
-                                backgroundPosition: 'center',
-                                backgroundRepeat: 'no-repeat'
-                            }}
-                        ></div>
-                    );
-                })}
+            <div className="relative w-full flex justify-center items-center mt-[100px] px-4">
+                <div className="relative w-full max-w-6xl">
+                    <div className="flex flex-wrap sm:flex-nowrap justify-center gap-[40px] sm:gap-[120px] w-full">
+                        {[...Array(5)].map((_, i) => {
+                            // Desktop positions
+                            const desktopTops = [-63, 320, 120, -40, 160];
+                            // Mobile positions
+                            const mobileTops = [0, 40, -20, 0, 0];
+                            
+                            return (
+                                <div
+                                    key={i}
+                                    className={`
+                                        rounded-xl shadow-lg relative
+                                        ${i >= 3 ? 'hidden sm:block' : 'block'}
+                                        w-[100px] h-[100px] sm:w-[200px] sm:h-[200px]
+                                        transition-transform duration-300 hover:scale-105
+                                    `}
+                                    style={{
+                                        top: window.innerWidth < 640 ? `${mobileTops[i]}px` : `${desktopTops[i]}px`,
+                                        backgroundImage: `url("/au${i+1}-${imageIndices[i] + 1}.webp")`,
+                                        backgroundSize: 'cover',
+                                        backgroundPosition: 'center',
+                                        backgroundRepeat: 'no-repeat'
+                                    }}
+                                ></div>
+                            );
+                        })}
+                    </div>
+                </div>
             </div>
 
 
             {/* About Us Title */}
-            <h1 className="text-white font-['Dela_Gothic_One'] text-[100px] sm:text-[300px] leading-none text-center mt-[300px] sm:mt-[400px] select-none">
+            <h1 className="text-white font-['Dela_Gothic_One'] text-[60px] xs:text-[80px] sm:text-[120px] md:text-[200px] lg:text-[250px] xl:text-[300px] leading-[0.8] text-center mt-[150px] xs:mt-[200px] sm:mt-[250px] md:mt-[300px] lg:mt-[350px] xl:mt-[400px] select-none transition-all duration-500">
                 About Us
             </h1>
 
             {/* Subtext */}
-            <p className="text-white text-[16px] sm:text-[24px] text-center max-w-[90%] sm:max-w-[900px] mt-4 sm:mt-8 leading-relaxed font-sans">
+            <p className="text-white text-[14px] xs:text-[16px] sm:text-[20px] md:text-[22px] lg:text-[24px] text-center max-w-[90%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[900px] mt-4 sm:mt-6 md:mt-8 leading-relaxed sm:leading-loose font-sans px-4 transition-all duration-300">
                 we are a creative collective of event producers, marketing specialists,
                 art directors, designers, and strategic analysts.
             </p>
