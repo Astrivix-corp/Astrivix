@@ -238,7 +238,7 @@ else if (item === 'Career') navigate('/career');
                 </div>
             </div>
 
-            <style jsx>{`
+            <style jsx="true">{`
                 .glass {
                     background: rgba(255, 255, 255, 0.1);
                     backdrop-filter: blur(5px);
