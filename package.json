@@ -1,7 +1,7 @@
 {
-  "name": "pixeljunkie-fullstack",
+  "name": "astrovix-fullstack",
   "version": "1.0.0",
-  "description": "Full-stack application for Pixel Junkie Creative Studio",
+  "description": "Full-stack application for Astrovix",
   "main": "index.js",
   "scripts": {
     "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",

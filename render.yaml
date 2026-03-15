@@ -1,7 +1,7 @@
 services:
   # Backend API Service
   - type: web
-    name: pixeljunkie-backend
+    name: astrovix
     runtime: node
     plan: free
     buildCommand: cd backend && npm install
@@ -26,7 +26,7 @@ services:
 
   # Frontend Static Site
   - type: web
-    name: pixeljunkie-frontend
+    name: astrovix
     runtime: static
     buildCommand: cd frontend && npm install && npm run build
     staticPublishPath: ./frontend/dist
