@@ -126,7 +126,10 @@ function Welcome() {
     <>
       <div className="content-wrap">
         <header>
-          <h1 className="fluid">Welcome to<br />Pixel Junkie Creative Studio</h1>
+          <h1 className="fluid">
+            Welcome to
+            <span className="astrovix-text">Astrovix</span>
+          </h1>
         </header>
         <main>
           <section>
@@ -236,7 +239,7 @@ function Welcome() {
           </section>
         </main>
       </div>
-      
+
     </>
   )
 }

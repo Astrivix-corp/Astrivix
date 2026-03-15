@@ -6,9 +6,9 @@ import loadingAnimation from '../../public/Loading.json';
 // Hamburger Icon
 const HamburgerIcon = () => (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M3 12H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M3 6H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M3 18H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M3 12H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M3 6H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M3 18H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
 );
 
@@ -110,11 +110,10 @@ const Hero = () => {
             <div className="fixed top-0 left-0 right-0 z-50">
                 <div className="max-w-full mx-auto relative h-[10vh] px-[4vw] flex justify-between items-center">
                     <img
-                        src="/logo.png"
+                        src="/logo.jpg"
                         alt="Logo"
-                        className={`w-[70px] md:w-[90px] transition-all duration-1000 ${
-                            showElements ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5'
-                        }`}
+                        className={`w-[50px] md:w-[60px] xl:w-[70px] transition-all duration-1000 ${showElements ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5'
+                            }`}
                     />
 
                     {/* Desktop Nav */}
@@ -157,14 +156,14 @@ const Hero = () => {
                 {/* Mobile Menu */}
                 {mobileOpen && (
                     <div className="fixed inset-0 z-[95] bg-black/90 backdrop-blur-md flex flex-col items-center justify-center space-y-6 md:space-y-8 text-white transition-all duration-300">
-{['Services', 'Projects', 'About Us', 'Career', 'Application Form'].map((item, i) => (
+                        {['Services', 'Projects', 'About Us', 'Career', 'Application Form'].map((item, i) => (
                             <button
                                 key={i}
                                 onClick={() => {
                                     setMobileOpen(false);
                                     setTimeout(() => {
                                         if (item === 'Application Form') navigate('/client-application');
-else if (item === 'Career') navigate('/career');
+                                        else if (item === 'Career') navigate('/career');
                                         else {
                                             const section = document.getElementById(item.toLowerCase().replace(' ', ''));
                                             section?.scrollIntoView({ behavior: 'smooth' });
@@ -204,24 +203,24 @@ else if (item === 'Career') navigate('/career');
                             'Ongoing Support',
                         ].map((text, index) => (
                             <span key={index} className="glass text-white text-[clamp(0.8rem,1.3vw,1.1rem)] px-3 py-1 inline-block">
-                {text}
-              </span>
+                                {text}
+                            </span>
                         ))}
                     </div>
                 </div>
 
                 <div>
                     <h1
-                        className="font-dela font-bold text-white leading-none mb-4 text-5xl xs:text-6xl sm:text-7xl md:text-8xl lg:text-8xl xl:text-9xl 2xl:text-[10rem]"
+                        className="font-dela font-bold text-white leading-none mb-4 text-6xl xs:text-8xl sm:text-9xl md:text-10xl lg:text-10xl xl:text-10xl 2xl:text-[20rem]"
                     >
-                        Pixel Junkie
+                        Astrovix
                     </h1>
                     <div className="w-full flex justify-end">
                         <h2
                             className="font-dela font-bold text-white transition-all duration-1000 delay-300"
-                            style={{ fontSize: 'clamp(1.8rem, 4vw, 6rem)' }}
+                            style={{ fontSize: 'clamp(1.8rem, 5vw, 7rem)' }}
                         >
-                            Creative Studio
+                            corp
                         </h2>
                     </div>
                     <p

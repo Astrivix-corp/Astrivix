@@ -35,8 +35,8 @@ const Bottom = () => {
                     {/* --- Left Section --- */}
                     <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
                         <img
-                            src="/logo.png"
-                            alt="Pixel Junkie Logo"
+                            src="/logo2.jpg"
+                            alt="Astrovix corp. logo"
                             className="w-[135px] h-[135px] mb-4"
                         />
                         <p className="text-[14px] md:text-[18px] text-gray-300 w-[255px] mb-4">
@@ -65,7 +65,7 @@ const Bottom = () => {
                             <div className="flex flex-col gap-3 text-[14px] text-gray-300">
                                 <div className="flex items-center gap-3">
                                     <MapPin size={14} className="sm:size-[18px]"/>
-                                    <span>Pixel Junkie Creative Studio</span>
+                                    <span>Astrovix corp</span>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <Phone size={14} className="sm:size-[18px]"/>
@@ -109,7 +109,7 @@ const Bottom = () => {
                 <div className="w-full border-t border-gray-700 mt-10 pt-4 flex flex-col sm:flex-row justify-between items-center text-gray-400 text-[10px] md:text-[13px]">
                     <div className="flex items-center gap-2">
                         <img src="/c-icon.png" alt="c icon" className="w-3 md:w-3.5 h-3 md:h-3.5" />
-                        <span>2025 Pixel Junkie Creative Studio. All Rights Reserved.</span>
+                        <span>2026 Astrovix corp. All Rights Reserved.</span>
                     </div>
                     <div className="flex gap-6 mt-4 sm:mt-0">
                         <button 

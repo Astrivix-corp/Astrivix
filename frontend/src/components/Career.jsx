@@ -65,7 +65,7 @@ const Career = () => {
         >
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mt-16 sm:mt-20 md:mt-32 font-bold mb-6 leading-tight px-4">
             <span className="text-black">CAREERS AT </span>
-            <span className="text-blue-600">PIXEL JUNKIE</span>
+            <span className="text-blue-600">ASTROVIX CORP.</span>
           </h1>
 
           <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed px-4">

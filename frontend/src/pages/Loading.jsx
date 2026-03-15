@@ -81,7 +81,7 @@ const Loading = ({ onComplete }) => {
                                 exit={{ opacity: 0 }}
                                 transition={{ duration: 1 }}
                             >
-                                Welcome to the Pixel Junkie Creative Studio!
+                                Welcome to the Astrovix corp.!
                             </motion.h1>
                         )}
                     </AnimatePresence>
