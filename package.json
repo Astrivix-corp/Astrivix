@@ -1,7 +1,7 @@
 {
-  "name": "astrovix-fullstack",
+  "name": "astrivix-fullstack",
   "version": "1.0.0",
-  "description": "Full-stack application for Astrovix",
+  "description": "Full-stack application for Astrivix",
   "main": "index.js",
   "scripts": {
     "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",

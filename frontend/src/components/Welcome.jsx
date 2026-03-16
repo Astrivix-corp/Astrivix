@@ -128,7 +128,7 @@ function Welcome() {
         <header>
           <h1 className="fluid">
             Welcome to
-            <span className="astrovix-text">Astrovix</span>
+            <span className="astrovix-text">Astrivix</span>
           </h1>
         </header>
         <main>

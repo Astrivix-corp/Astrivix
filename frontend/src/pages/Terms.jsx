@@ -49,7 +49,7 @@ const Terms = () => {
                             <div>
                                 <p className="text-gray-800 font-semibold font-afacad text-lg">"Content"</p>
                                 <p className="text-gray-700 font-afacad text-lg leading-relaxed">
-                                    Means all text, images, audio, video, scripts, code, software, databases, and any other information on Our Website or social media channels, including but not limited to Astrovix corp.'s Instagram and LinkedIn accounts.
+                                    Means all text, images, audio, video, scripts, code, software, databases, and any other information on Our Website or social media channels, including but not limited to Astrivix corp.'s Instagram and LinkedIn accounts.
                                 </p>
                             </div>
                             <div>
@@ -67,7 +67,7 @@ const Terms = () => {
                             <div>
                                 <p className="text-gray-800 font-semibold font-afacad text-lg">"We/Us/Our"</p>
                                 <p className="text-gray-700 font-afacad text-lg leading-relaxed">
-                                    Means Astrovix corp., the owner and operator of Our Website.
+                                    Means Astrivix corp., the owner and operator of Our Website.
                                 </p>
                             </div>
                             <div>
@@ -130,7 +130,7 @@ const Terms = () => {
                         <ul className="list-disc list-inside text-gray-700 font-afacad text-lg leading-relaxed space-y-2 ml-4">
                             <li>All Content on Our Website and social media channels is owned by Us or our licensors.</li>
                             <li>You may not reproduce, distribute, sell, sub-license, or create derivative works without our prior written consent.</li>
-                            <li>You may access and view Content in a browser, print pages, and save pages for offline viewing, provided you acknowledge Astrovix corp. as the owner.</li>
+                            <li>You may access and view Content in a browser, print pages, and save pages for offline viewing, provided you acknowledge Astrivix corp. as the owner.</li>
                         </ul>
                     </div>
 
@@ -163,7 +163,7 @@ const Terms = () => {
                             9. Limitation of Liability
                         </h2>
                         <p className="text-gray-700 font-afacad text-lg leading-relaxed">
-                            To the fullest extent permitted by law, Astrovix corp. shall not be liable for any direct, indirect, incidental, special, or consequential damages arising from use of Our Website.
+                            To the fullest extent permitted by law, Astrivix corp. shall not be liable for any direct, indirect, incidental, special, or consequential damages arising from use of Our Website.
                         </p>
                     </div>
 

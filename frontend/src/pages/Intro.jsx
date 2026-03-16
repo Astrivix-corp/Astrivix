@@ -18,7 +18,7 @@ const Intro = ({ isVisible }) => {
         <div className="w-full h-full bg-white text-black flex items-start justify-center pt-28">
             <div className="max-w-[1700px] mx-auto text-center">
                 <h1 className="font-dela text-[26px] md:text-8xl mb-8 glass-text-shadow">
-                    Welcome to Astrovix
+                    Welcome to Astrivix
                 </h1>
                 <div className="glass text-[16px] md:text-xl font-alata leading-relaxed max-w-[950px] mx-auto">
                     <p className="mb-6">

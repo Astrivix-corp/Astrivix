@@ -36,7 +36,7 @@ const Bottom = () => {
                     <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
                         <img
                             src="/logo2.jpg"
-                            alt="Astrovix corp. logo"
+                            alt="Astrivix corp. logo"
                             className="w-[135px] h-[135px] mb-4"
                         />
                         <p className="text-[14px] md:text-[18px] text-gray-300 w-[255px] mb-4">
@@ -49,10 +49,16 @@ const Bottom = () => {
                             <a href="https://www.instagram.com/pixeljunkiestudio.in?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="hover:text-[#2ab4bc] transition-colors">
                                 <Instagram size={25} className="sm:size-[30px]"/>
                             </a>
-                            <button onClick={() => window.open('https://wa.me/+918921318291?text=Hey Pixel Junkie Team! I just visited your website and loved what I saw. I\'d love to discuss how you can help with my branding, design, or digital marketing needs. Let\'s chat!', '_blank')} className="hover:text-[#2ab4bc] transition-colors bg-transparent border-none cursor-pointer">
+                            <button 
+                                onClick={() => window.open('https://wa.me/+917025133828?text=Hey Astrivix Team! I just visited your website and loved what I saw. I\'d love to discuss how you can help with my branding, design, or digital marketing needs. Let\'s chat!', '_blank')} 
+                                className="hover:text-[#2ab4bc] transition-colors bg-transparent border-none cursor-pointer"
+                            >
                                 <MessageCircleCode size={25} className="sm:size-[30px]"/>
                             </button>
-                            <button onClick={() => window.open('mailto:business@pixeljunkiestudio.in?subject=Inquiry from Pixel Junkie Creative Studio Website&body=Hi Pixel Junkie Team,%0A%0AI just came across your website and was really impressed! I\'d love to learn more about your services and how you can help with my branding, design, or digital marketing needs.%0A%0ALooking forward to your response!%0A%0ABest,%0A[Your Name]%0A[Your Contact Information] (Optional)', '_self')} className="hover:text-[#2ab4bc] transition-colors bg-transparent border-none cursor-pointer">
+                            <button 
+                                onClick={() => window.open('mailto:info@astrivix.com?subject=Inquiry from Astrivix Website&body=Hi Astrivix Team,%0A%0AI just came across your website and was really impressed! I\'d love to learn more about your services and how you can help with my branding, design, or digital marketing needs.%0A%0ALooking forward to your response!%0A%0ABest,%0A[Your Name]%0A[Your Contact Information] (Optional)', '_self')} 
+                                className="hover:text-[#2ab4bc] transition-colors bg-transparent border-none cursor-pointer"
+                            >
                                 <Mail size={25} className="sm:size-[30px]"/>
                             </button>
                         </div>
@@ -63,17 +69,20 @@ const Bottom = () => {
                         <div className="flex flex-col items-center sm:items-start">
                             <h2 className="text-[24px] font-semibold mb-4">Get in Touch</h2>
                             <div className="flex flex-col gap-3 text-[14px] text-gray-300">
-                                <div className="flex items-center gap-3">
-                                    <MapPin size={14} className="sm:size-[18px]"/>
-                                    <span>Astrovix corp</span>
+                                <div className="flex items-start gap-3">
+                                    <MapPin size={14} className="sm:size-[18px] mt-1"/>
+                                    <div className="flex flex-col">
+                                        <span>Astrivix corp</span>
+                                        <span className="text-[12px] md:text-[13px]">Metro Pillar No-41, Grande Tower, 3rd Floor, Pulinchode Junction, Aluva, Kerala 683101</span>
+                                    </div>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <Phone size={14} className="sm:size-[18px]"/>
-                                    <span>+91 89213 118292</span>
+                                    <span>+91 70251 33828</span>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <AtSign size={14} className="sm:size-[18px]"/>
-                                    <span>pixeljunkiestudios.in@gmail.com</span>
+                                    <span>business@astrivix.com</span>
                                 </div>
                             </div>
                         </div>
@@ -109,7 +118,7 @@ const Bottom = () => {
                 <div className="w-full border-t border-gray-700 mt-10 pt-4 flex flex-col sm:flex-row justify-between items-center text-gray-400 text-[10px] md:text-[13px]">
                     <div className="flex items-center gap-2">
                         <img src="/c-icon.png" alt="c icon" className="w-3 md:w-3.5 h-3 md:h-3.5" />
-                        <span>2026 Astrovix corp. All Rights Reserved.</span>
+                        <span>2026 Astrivix corp. All Rights Reserved.</span>
                     </div>
                     <div className="flex gap-6 mt-4 sm:mt-0">
                         <button 

@@ -112,7 +112,7 @@ const Hero = () => {
                     <img
                         src="/logo.jpg"
                         alt="Logo"
-                        className={`w-[50px] md:w-[60px] xl:w-[70px] transition-all duration-1000 ${showElements ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5'
+                        className={`w-[80px] md:w-[100px] xl:w-[120px] h-auto transition-all duration-1000 ${showElements ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5'
                             }`}
                     />
 
@@ -213,7 +213,7 @@ const Hero = () => {
                     <h1
                         className="font-dela font-bold text-white leading-none mb-4 text-6xl xs:text-8xl sm:text-9xl md:text-10xl lg:text-10xl xl:text-10xl 2xl:text-[20rem]"
                     >
-                        Astrovix
+                        Astrivix
                     </h1>
                     <div className="w-full flex justify-end">
                         <h2

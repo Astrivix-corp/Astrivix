@@ -254,7 +254,7 @@ const emailTemplates = {
               
               <div class="social-links">
                 <p>🌐 <a href="#">www.pixeljunkie.com</a> | 
-                📧 <a href="mailto:${process.env.ADMIN_EMAIL || 'hello@pixeljunkie.com'}">${process.env.ADMIN_EMAIL || 'hello@pixeljunkie.com'}</a></p>
+                📧 <a href="mailto:${process.env.ADMIN_EMAIL || 'business@astrivix.com'}">${process.env.ADMIN_EMAIL || 'business@astrivix.com'}</a></p>
               </div>
             </div>
           </div>

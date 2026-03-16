@@ -84,7 +84,7 @@ const Contact = () => {
                             extraordinary together.
                         </p>
                         <button 
-                            onClick={() => window.open('tel:+918921318291', '_self')}
+                            onClick={() => window.open('tel:+917025133828', '_self')}
                             className="bg-black text-white px-6 py-3 rounded-full font-lexend text-sm font-medium hover:bg-gray-800 transition-colors duration-300"
                         >
                             Call Now
@@ -142,7 +142,7 @@ const Contact = () => {
                             directly with our team.
                         </p>
                         <button 
-                            onClick={() => window.open('https://wa.me/918921318291?text=Hey Pixel Junkie Team! I just visited your website and loved what I saw. I\'d love to discuss how you can help with my branding, design, or digital marketing needs. Let\'s chat!', '_blank')}
+                            onClick={() => window.open('https://wa.me/917025133828?text=Hey Astrivix Team! I just visited your website and loved what I saw. I\'d love to discuss how you can help with my branding, design, or digital marketing needs. Let\'s chat!', '_blank')}
                             className="bg-black text-white px-6 py-3 rounded-full font-lexend text-sm font-medium hover:bg-gray-800 transition-colors duration-300"
                         >
                             Chat on WhatsApp

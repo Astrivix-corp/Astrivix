@@ -269,7 +269,7 @@ const ClientApplication = () => {
                             {/* Excitement */}
                             <div>
                                 <label className="block text-md font-medium text-gray-700 mb-2 font-afacad">
-                                    What makes you excited about working with Astrovix?
+                                    What makes you excited about working with Astrivix?
                                 </label>
                                 <textarea
                                     name="excitement"

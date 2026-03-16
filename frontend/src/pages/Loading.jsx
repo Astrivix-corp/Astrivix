@@ -81,7 +81,7 @@ const Loading = ({ onComplete }) => {
                                 exit={{ opacity: 0 }}
                                 transition={{ duration: 1 }}
                             >
-                                Welcome to the Astrovix corp.!
+                                Welcome to the Astrivix corp.!
                             </motion.h1>
                         )}
                     </AnimatePresence>
