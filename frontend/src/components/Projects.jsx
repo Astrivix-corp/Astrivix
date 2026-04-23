@@ -25,14 +25,14 @@ export default function Projects({ showProjects }) {
     return (
         <div id="projects" className="relative w-full min-h-screen bg-black text-white flex flex-col">
             <div className="flex-grow flex flex-col justify-center">
-                <div className="w-full max-w-7xl mx-auto px-4">
+                <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* === TOP SECTION === */}
-                    <div className="w-full mb-8">
-                        <h1 className="text-[20px] md:text-[50px] font-dela tracking-wide">OUR PROJECTS</h1>
+                    <div className="w-full mb-6 sm:mb-8">
+                        <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-dela tracking-wide">OUR PROJECTS</h1>
                     </div>
 
                     {/* === SLIDER SECTION === */}
-                    <div className="banner w-full h-[60vh] overflow-visible">
+                    <div className="banner w-full h-[50vh] sm:h-[60vh] lg:h-[70vh] overflow-visible">
                         <div className="slider" style={{ "--quantity": boxes.length }}>
                             {boxes.map((box, index) => (
                                 <div

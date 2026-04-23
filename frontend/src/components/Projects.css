@@ -24,6 +24,7 @@
 .banner {
     width: 100%;
     height: 100vh;
+    height: 100dvh;
     text-align: center;
     overflow: hidden;
     position: relative;
@@ -33,20 +34,20 @@
     position: absolute;
     width: 200px;
     height: 250px;
-    top: 20%;
-    left: calc(50% - 100px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) perspective(1000px);
     transform-style: preserve-3d;
-    transform: perspective(1000px);
     animation: autoRun 20s linear infinite;
     z-index: 2;
 }
 
 @keyframes autoRun {
     from {
-        transform: perspective(1000px) rotateY(0deg);
+        transform: translate(-50%, -50%) perspective(1000px) rotateY(0deg);
     }
     to {
-        transform: perspective(1000px) rotateY(360deg);
+        transform: translate(-50%, -50%) perspective(1000px) rotateY(360deg);
     }
 }
 
@@ -58,6 +59,7 @@
             translateZ(550px);
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    will-change: transform;
 }
 
 .banner .slider .item img {
@@ -106,28 +108,59 @@
     margin: 0 auto;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1200px) {
     .banner .slider {
-        width: 160px;
-        height: 200px;
-        left: calc(50% - 80px);
+        width: 180px;
+        height: 225px;
     }
     .banner .slider .item {
         transform:
                 rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-                translateZ(350px);
+                translateZ(450px);
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
     .banner .slider {
-        width: 140px;
-        height: 210px;
-        left: calc(50% - 50px);
+        width: 160px;
+        height: 200px;
     }
     .banner .slider .item {
         transform:
                 rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-                translateZ(400px);
+                translateZ(380px);
+    }
+    .banner {
+        height: 80vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .banner .slider {
+        width: 140px;
+        height: 180px;
+    }
+    .banner .slider .item {
+        transform:
+                rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+                translateZ(320px);
+    }
+    .banner {
+        height: 70vh;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .banner .slider {
+        width: 120px;
+        height: 150px;
+    }
+    .banner .slider .item {
+        transform:
+                rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+                translateZ(280px);
+    }
+    .banner {
+        height: 60vh;
     }
 }
