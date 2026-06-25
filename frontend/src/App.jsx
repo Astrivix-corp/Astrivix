@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import Hero from './components/Hero';
@@ -9,14 +9,16 @@ import Projects from './components/Projects';
 import AboutUs from './components/AboutUs';
 import Career from './components/Career';
 import Bottom from './components/Bottom';
-import ClientApplication from './components/ClientApplication';
-import Privacy from './pages/Privacy';
-import Terms from './pages/Terms';
-import Portfolio from './pages/Portfolio';
+
+const ClientApplication = lazy(() => import('./components/ClientApplication'));
+const Privacy = lazy(() => import('./pages/Privacy'));
+const Terms = lazy(() => import('./pages/Terms'));
+const Portfolio = lazy(() => import('./pages/Portfolio'));
 
 function App() {
     return (
         <div className="min-h-screen bg-black">
+            <Suspense fallback={<div className="fixed inset-0 bg-black" />}>
             <Routes>
                 <Route path="/client-application" element={
                     <div className="min-h-screen">
@@ -54,6 +56,7 @@ function App() {
                     </>
                 } />
             </Routes>
+            </Suspense>
         </div>
     );
 }
