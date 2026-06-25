@@ -90,8 +90,8 @@ export default function AboutUs() {
                 ))}
             </div>
 
-            {/* About Us Title */}
-            <h1 className="font-['Dela_Gothic_One'] text-center mt-12 sm:mt-16 md:mt-20 lg:mt-24 select-none">
+{/* About Us Title */}
+<h1 className="font-['Dela_Gothic_One'] text-center mt-12 sm:mt-16 md:mt-20 lg:mt-24 select-none">
                 <span className="text-[40px] xs:text-[50px] sm:text-[70px] md:text-[100px] lg:text-[180px] xl:text-[250px] leading-[0.8]">
                     About Us
                 </span>

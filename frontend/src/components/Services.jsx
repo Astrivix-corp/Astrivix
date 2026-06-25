@@ -65,12 +65,12 @@ const Services = ({ showServices = true }) => {
                             { img: "/uiux.webp", title: "UI UX Designing" },
                             { img: "/wd.webp", title: "Web Development" },
                             { img: "/dm.webp", title: "Digital Marketing" },
-                            { img: "/mg.webp", title: "Motion Graphics", hideMobile: true },
+                            { img: "/mg.webp", title: "Motion Graphics", hideMd: true },
                         ].map((item, i) => (
                             <div
                                 key={i}
                                 className={`${
-                                    item.hideMobile ? "hidden sm:flex" : "flex"
+                                    item.hideMd ? "hidden md:flex" : "flex"
                                 } flex-col items-center transition-all duration-500 delay-${
                                     300 + i * 100
                                 } ${showServices ? "translate-y-0 opacity-100" : "translate-y-[100vh] opacity-0"}`}

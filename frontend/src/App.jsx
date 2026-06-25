@@ -12,6 +12,7 @@ import Bottom from './components/Bottom';
 import ClientApplication from './components/ClientApplication';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
+import Portfolio from './pages/Portfolio';
 
 function App() {
     return (
@@ -30,6 +31,11 @@ function App() {
                 <Route path="/terms" element={
                     <div className="min-h-screen">
                         <Terms />
+                    </div>
+                } />
+                <Route path="/portfolio" element={
+                    <div className="min-h-screen">
+                        <Portfolio />
                     </div>
                 } />
                 <Route path="/career" element={
