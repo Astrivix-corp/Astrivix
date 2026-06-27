@@ -218,7 +218,7 @@ const Hero = () => {
 
                 <div>
                     <h1
-                        className="font-dela font-bold text-white leading-none mb-4 text-6xl xs:text-8xl sm:text-9xl md:text-10xl lg:text-10xl xl:text-10xl 2xl:text-[20rem]"
+                        className="font-dela font-bold text-white leading-none mb-4 text-6xl xs:text-8xl sm:text-9xl md:text-[11rem] lg:text-[14rem] xl:text-[17rem] 2xl:text-[20rem]"
                     >
                         Astrivix
                     </h1>

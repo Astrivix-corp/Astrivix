@@ -1,279 +1,116 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
+import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+import { ArrowLeft, Sparkles } from 'lucide-react';
+
+const GradientText = ({ children, className = '' }) => (
+  <span className={`bg-gradient-to-r from-sky-400 via-blue-500 to-purple-500 bg-clip-text text-transparent ${className}`}>
+    {children}
+  </span>
+);
+
+const Badge = ({ children, className = '' }) => (
+  <span className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-[0.15em] uppercase border border-white/10 bg-white/5 text-white/70 backdrop-blur-md ${className}`}>
+    <Sparkles className="w-3 h-3 text-sky-400" />
+    {children}
+  </span>
+);
+
+const Section = ({ title, children }) => (
+  <div className="mb-10">
+    <h2 className="text-2xl font-semibold text-white mb-4">{title}</h2>
+    <div className="text-slate-400 space-y-3 leading-relaxed">{children}</div>
+  </div>
+);
 
 const Privacy = () => {
-    return (
-        <div className="fixed inset-0 bg-[#E8E3D8] overflow-auto">
-            {/* Navbar */}
-            <Navbar currentPage="privacy" />
-            
-            {/* Hero Section with Image and Overlay */}
-            <div className="relative w-full h-64 md:h-80 lg:h-96">
-                <img 
-                    src="/Privacy.webp" 
-                    alt="Privacy Notice" 
-                    className="w-full h-full object-cover"
-                />
-                {/* 50% Black Overlay */}
-                <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-                
-                {/* Title on overlay */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold font-mogilte text-center px-4">
-                        PRIVACY NOTICE
-                    </h1>
-                </div>
-            </div>
+  const navigate = useNavigate();
 
-            {/* Content Section */}
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-                <div className="space-y-8 md:space-y-10">
-                    
-                    {/* Introduction */}
-                    <div>
-                        <p className="text-gray-700 font-afacad text-lg mb-4">
-                            <strong>Effective Date:</strong> 01/01/2025
-                        </p>
-                        <p className="text-gray-700 font-afacad text-lg leading-relaxed mb-8">
-                            We respect the privacy of our clients and everyone who visits our website, www.pixeljunkiestudio.in (Our Site). Pixel Junkie Creative Studio (we/us/our) will only collect and use personal data in ways described in this Privacy Notice, and in compliance with applicable data protection laws.
-                        </p>
-                    </div>
-
-                    {/* Definitions and Interpretation */}
-                    <div>
-                        <h2 className="text-2xl md:text-3xl font-bold font-afacad text-gray-800 mb-4">
-                            1. Definitions and Interpretation
-                        </h2>
-                        <div className="space-y-4 ml-4">
-                            <div>
-                                <p className="text-gray-800 font-semibold font-afacad text-lg">Client:</p>
-                                <p className="text-gray-700 font-afacad text-lg leading-relaxed">
-                                    a client who engages our services or purchases products from us.
-                                </p>
-                            </div>
-                            <div>
-                                <p className="text-gray-800 font-semibold font-afacad text-lg">Data Protection Legislation:</p>
-                                <p className="text-gray-700 font-afacad text-lg leading-relaxed">
-                                    all applicable data protection and privacy legislation in force, including GDPR and any local privacy laws relevant to the processing of personal data.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Information About Us */}
-                    <div>
-                        <h2 className="text-2xl md:text-3xl font-bold font-afacad text-gray-800 mb-4">
-                            2. Information About Us
-                        </h2>
-                        <p className="text-gray-700 font-afacad text-lg leading-relaxed mb-4">
-                            Pixel Junkie Creative Studio is the controller responsible for your personal data.
-                        </p>
-                        <div className="space-y-2 ml-4">
-                            <p className="text-gray-700 font-afacad text-lg">
-                                <strong>Contact:</strong>
-                            </p>
-                            <p className="text-gray-700 font-afacad text-lg">
-                                📧 <a href="mailto:bussiness@pixeljunkiestudio.in" className="text-blue-600 hover:text-blue-800 underline">bussiness@pixeljunkiestudio.in</a>
-                            </p>
-                            <p className="text-gray-700 font-afacad text-lg">
-                                🌐 <a href="https://www.pixeljunkiestudio.in" className="text-blue-600 hover:text-blue-800 underline" target="_blank" rel="noopener noreferrer">www.pixeljunkiestudio.in</a>
-                            </p>
-                        </div>
-                    </div>
-
-                    {/* Your Personal Data */}
-                    <div>
-                        <h2 className="text-2xl md:text-3xl font-bold font-afacad text-gray-800 mb-4">
-                            3. Your Personal Data
-                        </h2>
-                        <ul className="list-disc list-inside text-gray-700 font-afacad text-lg leading-relaxed space-y-2 ml-4">
-                            <li>Personal data is any information that identifies you, including name, contact details, online identifiers, or account information.</li>
-                            <li>Keep your personal data accurate and up-to-date.</li>
-                            <li>If you do not provide required personal data, we may be unable to deliver certain services or products.</li>
-                        </ul>
-                    </div>
-
-                    {/* Your Rights */}
-                    <div>
-                        <h2 className="text-2xl md:text-3xl font-bold font-afacad text-gray-800 mb-4">
-                            4. Your Rights
-                        </h2>
-                        <p className="text-gray-700 font-afacad text-lg leading-relaxed mb-4">
-                            You have the following rights under Data Protection Legislation:
-                        </p>
-                        <ul className="list-disc list-inside text-gray-700 font-afacad text-lg leading-relaxed space-y-2 ml-4 mb-4">
-                            <li>Right to be informed about how we use your personal data</li>
-                            <li>Right to access your personal data</li>
-                            <li>Right to rectify inaccurate or incomplete personal data</li>
-                            <li>Right to request deletion or withdraw consent</li>
-                            <li>Right to restrict processing for specific purposes</li>
-                            <li>Right to portability of your personal data</li>
-                            <li>Rights related to automated decision-making (we do not use this)</li>
-                            <li>Right to lodge a complaint with the relevant data protection authority</li>
-                        </ul>
-                        <p className="text-gray-700 font-afacad text-lg leading-relaxed">
-                            For any questions or requests, contact us at <a href="mailto:bussiness@pixeljunkiestudio.in" className="text-blue-600 hover:text-blue-800 underline">bussiness@pixeljunkiestudio.in</a>.
-                        </p>
-                    </div>
-
-                    {/* What Data We Collect */}
-                    <div>
-                        <h2 className="text-2xl md:text-3xl font-bold font-afacad text-gray-800 mb-4">
-                            5. What Data We Collect
-                        </h2>
-                        <p className="text-gray-700 font-afacad text-lg leading-relaxed mb-4">
-                            We may collect personal data depending on your interactions:
-                        </p>
-                        <ul className="list-disc list-inside text-gray-700 font-afacad text-lg leading-relaxed space-y-2 ml-4">
-                            <li><strong>Contact Information:</strong> name, email, phone, address</li>
-                            <li><strong>Account Information:</strong> username, password, profile details</li>
-                            <li><strong>Payment Information:</strong> billing details, transaction history (full card numbers are not stored)</li>
-                            <li><strong>Communication Data:</strong> messages between you and us</li>
-                            <li><strong>Usage Information:</strong> analytics on website interactions</li>
-                            <li><strong>Technical Information:</strong> IP address, browser type, device type, operating system</li>
-                            <li><strong>Social Media Data:</strong> interactions on our social media pages</li>
-                            <li><strong>Cookies & Tracking Technologies:</strong> for analytics and user experience</li>
-                            <li><strong>Other Information:</strong> additional data collected with your consent or as required by law</li>
-                        </ul>
-                    </div>
-
-                    {/* How We Use Your Personal Data */}
-                    <div>
-                        <h2 className="text-2xl md:text-3xl font-bold font-afacad text-gray-800 mb-4">
-                            6. How We Use Your Personal Data
-                        </h2>
-                        <p className="text-gray-700 font-afacad text-lg leading-relaxed mb-4">
-                            We process your data lawfully for purposes including:
-                        </p>
-                        <ul className="list-disc list-inside text-gray-700 font-afacad text-lg leading-relaxed space-y-2 ml-4 mb-4">
-                            <li>To perform contracts with clients</li>
-                            <li><strong>For our legitimate interests:</strong> business development, client relationship management, IT security, website improvement</li>
-                            <li>To comply with legal obligations</li>
-                            <li><strong>With your consent:</strong> marketing communications and direct outreach</li>
-                        </ul>
-                        <p className="text-gray-700 font-afacad text-lg leading-relaxed">
-                            We do not use automated decision-making or profiling.
-                        </p>
-                    </div>
-
-                    {/* Keeping Your Personal Data */}
-                    <div>
-                        <h2 className="text-2xl md:text-3xl font-bold font-afacad text-gray-800 mb-4">
-                            7. Keeping Your Personal Data
-                        </h2>
-                        <p className="text-gray-700 font-afacad text-lg leading-relaxed">
-                            We retain personal data only as long as necessary for the purpose it was collected, taking into account legal obligations and potential disputes. Data may be anonymised for research or statistical purposes.
-                        </p>
-                    </div>
-
-                    {/* Storing Your Personal Data */}
-                    <div>
-                        <h2 className="text-2xl md:text-3xl font-bold font-afacad text-gray-800 mb-4">
-                            8. Storing Your Personal Data
-                        </h2>
-                        <p className="text-gray-700 font-afacad text-lg leading-relaxed mb-4">
-                            We implement technical and organizational measures to protect your data:
-                        </p>
-                        <ul className="list-disc list-inside text-gray-700 font-afacad text-lg leading-relaxed space-y-2 ml-4">
-                            <li>SSL encryption for data in transit and at rest</li>
-                            <li>Secure storage with access controls</li>
-                            <li>Regular security audits and updates</li>
-                            <li>Confidentiality obligations for staff and contractors</li>
-                            <li>Procedures for data breach management and notification</li>
-                        </ul>
-                    </div>
-
-                    {/* Transferring and Sharing Your Personal Data */}
-                    <div>
-                        <h2 className="text-2xl md:text-3xl font-bold font-afacad text-gray-800 mb-4">
-                            9. Transferring and Sharing Your Personal Data
-                        </h2>
-                        <p className="text-gray-700 font-afacad text-lg leading-relaxed mb-4">
-                            We may share data with trusted third-party service providers for project management, email, analytics, or payment processing. Examples include:
-                        </p>
-                        <ul className="list-disc list-inside text-gray-700 font-afacad text-lg leading-relaxed space-y-2 ml-4 mb-4">
-                            <li>Project Planning Platforms (e.g., Monday.com)</li>
-                            <li>Email & Scheduling Services (e.g., Gmail/Google Workspace)</li>
-                        </ul>
-                        <p className="text-gray-700 font-afacad text-lg leading-relaxed mb-4">
-                            Data may be stored or processed outside your country; we ensure appropriate protections are in place.
-                        </p>
-                        <p className="text-gray-700 font-afacad text-lg leading-relaxed mb-2">
-                            We may also share data:
-                        </p>
-                        <ul className="list-disc list-inside text-gray-700 font-afacad text-lg leading-relaxed space-y-2 ml-4">
-                            <li>With your consent</li>
-                            <li>For legal obligations or to prevent harm</li>
-                            <li>With professional advisers (lawyers, auditors, insurers)</li>
-                            <li>With authorities such as tax regulators</li>
-                            <li>In the event of business sale or transfer</li>
-                        </ul>
-                    </div>
-
-                    {/* Controlling and Withholding Your Personal Data */}
-                    <div>
-                        <h2 className="text-2xl md:text-3xl font-bold font-afacad text-gray-800 mb-4">
-                            10. Controlling and Withholding Your Personal Data
-                        </h2>
-                        <p className="text-gray-700 font-afacad text-lg leading-relaxed">
-                            You may control how we use your data for marketing purposes (e.g., unsubscribing from emails). Some website features may require personal data to function.
-                        </p>
-                    </div>
-
-                    {/* Accessing Your Personal Data */}
-                    <div>
-                        <h2 className="text-2xl md:text-3xl font-bold font-afacad text-gray-800 mb-4">
-                            11. Accessing Your Personal Data
-                        </h2>
-                        <p className="text-gray-700 font-afacad text-lg leading-relaxed mb-4">
-                            You can request details of your personal data (Subject Access Request) by emailing <a href="mailto:bussiness@pixeljunkiestudio.in" className="text-blue-600 hover:text-blue-800 underline">bussiness@pixeljunkiestudio.in</a>.
-                        </p>
-                        <ul className="list-disc list-inside text-gray-700 font-afacad text-lg leading-relaxed space-y-2 ml-4">
-                            <li>Normally free of charge, unless requests are excessive</li>
-                            <li>Responses provided within one month (up to three months if complex)</li>
-                        </ul>
-                    </div>
-
-                    {/* Contact Details */}
-                    <div>
-                        <h2 className="text-2xl md:text-3xl font-bold font-afacad text-gray-800 mb-4">
-                            12. Contact Details
-                        </h2>
-                        <p className="text-gray-700 font-afacad text-lg leading-relaxed mb-4">
-                            For any questions regarding your personal data or this Privacy Notice, contact us at:
-                        </p>
-                        <div className="space-y-2 ml-4">
-                            <p className="text-gray-700 font-afacad text-lg">
-                                📧 <a href="mailto:bussiness@pixeljunkiestudio.in" className="text-blue-600 hover:text-blue-800 underline">bussiness@pixeljunkiestudio.in</a>
-                            </p>
-                            <p className="text-gray-700 font-afacad text-lg">
-                                🌐 <a href="https://www.pixeljunkiestudio.in/contact" className="text-blue-600 hover:text-blue-800 underline" target="_blank" rel="noopener noreferrer">www.pixeljunkiestudio.in/contact</a>
-                            </p>
-                        </div>
-                    </div>
-
-                    {/* Updates to This Privacy Notice */}
-                    <div>
-                        <h2 className="text-2xl md:text-3xl font-bold font-afacad text-gray-800 mb-4">
-                            13. Updates to This Privacy Notice
-                        </h2>
-                        <p className="text-gray-700 font-afacad text-lg leading-relaxed">
-                            We may update this Privacy Notice from time to time. The latest version will be published on Our Site, and continued use of Our Site constitutes acceptance of the updated terms.
-                        </p>
-                    </div>
-
-                    {/* Last Updated */}
-                    <div className="border-t border-gray-300 pt-8 mt-12">
-                        <p className="text-gray-600 font-afacad text-base">
-                            Last Updated: 01/01/2025
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-
+  return (
+    <div className="min-h-screen bg-[#020617]">
+      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-slate-800/50 bg-[#020617]/80 backdrop-blur-xl">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
+          <div className="flex items-center justify-between h-16 md:h-20">
+            <button
+              onClick={() => navigate(-1)}
+              className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors"
+            >
+              <ArrowLeft className="w-5 h-5" />
+              <span className="text-sm font-medium">Back</span>
+            </button>
+            <button
+              onClick={() => navigate('/')}
+              className="text-xl md:text-2xl font-bold tracking-wider text-white hover:opacity-80 transition-opacity"
+            >
+              ASTRIVIX
+            </button>
+          </div>
         </div>
-    );
+      </nav>
+
+      <section className="relative pt-32 pb-20 px-6">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-900 via-[#020617] to-[#020617]" />
+          <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-purple-900/20 rounded-full blur-[120px] animate-pulse" />
+          <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-blue-900/20 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '1s' }} />
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-center mb-16"
+          >
+            <Badge className="mb-4">Legal</Badge>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+              Privacy <GradientText>Policy</GradientText>
+            </h1>
+            <p className="text-slate-400">Last updated: June 2026</p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="bg-slate-900/40 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8 md:p-12"
+          >
+            <Section title="1. Information We Collect">
+              <p>We collect information you provide directly to us when you fill out forms, communicate with us via email or messaging, or otherwise interact with our services. This may include your name, email address, phone number, and project details.</p>
+              <p>We also automatically collect certain information when you visit our website, including your IP address, browser type, device information, and usage data through cookies and similar technologies.</p>
+            </Section>
+
+            <Section title="2. How We Use Your Information">
+              <p>We use the information we collect to respond to your inquiries, provide our services, improve our website and offerings, send relevant communications, and comply with legal obligations.</p>
+              <p>We do not sell your personal information to third parties. Your data is used solely for business operations directly related to Astrivix's services.</p>
+            </Section>
+
+            <Section title="3. Data Protection">
+              <p>We implement industry-standard security measures including SSL encryption, secure data storage, and access controls to protect your personal information against unauthorized access, alteration, or disclosure.</p>
+              <p>While we strive to protect your data, no method of transmission over the Internet is 100% secure. We encourage you to take steps to protect your own information as well.</p>
+            </Section>
+
+            <Section title="4. Cookies">
+              <p>Our website may use cookies and similar tracking technologies to enhance your browsing experience, analyze site traffic, and understand where our visitors come from. You can control cookie preferences through your browser settings.</p>
+            </Section>
+
+            <Section title="5. Third-Party Services">
+              <p>We may use third-party services (such as analytics providers and communication tools) that have their own privacy policies. We encourage you to review their policies to understand how they handle your data.</p>
+            </Section>
+
+            <Section title="6. Your Rights">
+              <p>You have the right to access, correct, or delete your personal data held by us. You may also withdraw consent for data processing where applicable. To exercise these rights, please contact us at business@astrivix.com.</p>
+            </Section>
+
+            <Section title="7. Contact Us">
+              <p>If you have any questions about this Privacy Policy, please reach out to us at:</p>
+              <p className="text-white">business@astrivix.com</p>
+              <p className="text-white">Astrivix Corp, Metro Pillar No-41, Grande Tower, 3rd Floor, Pulinchode Junction, Aluva, Kerala 683101</p>
+            </Section>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
 };
 
 export default Privacy;

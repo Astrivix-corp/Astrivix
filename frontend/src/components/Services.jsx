@@ -131,7 +131,9 @@ const Services = ({ showServices = true }) => {
                         "UI UX Designing",
                         "Web Development",
                         "App Development",
+                        "SEO (Search Engine Optimization)",
                         "Digital Marketing & Strategy",
+                        "Graphic Designing",
                         "Video Production",
                         "Motion Graphics",
                     ].map((service, i) => (
@@ -199,23 +201,36 @@ const Services = ({ showServices = true }) => {
 // Helper function for descriptions
 function getServiceDescription(service) {
     const desc = {
-        "Branding & Identity":
-            "We create powerful brand identities that go beyond logos, shaping visuals, voice, and strategy to help your business stand out and connect with your audience.",
-        "Business Consulting & Scaling Solutions":
-            "We guide businesses from idea to growth, offering strategic insights, process optimization, and scalable solutions that help companies launch, adapt, and expand successfully.",
-        "UI UX Designing":
-            "We design intuitive, user-friendly, and visually engaging digital experiences that enhance usability, boost engagement, and turn visitors into loyal customers.",
-        "Web Development":
-            "We build fast, secure, and scalable websites tailored to your business needs, combining modern technology with seamless functionality to deliver powerful online experiences.",
-        "App Development":
-            "We create high-performance, user-centric mobile and web applications that combine sleek design with powerful functionality to drive engagement and business growth.",
-        "Digital Marketing & Strategy":
-            "We craft data-driven marketing strategies that boost your online presence and drive measurable growth through SEO, social media, and targeted campaigns.",
-        "Video Production":
-            "We produce high-quality videos and motion graphics that tell your brand's story, engage audiences, and create lasting impact across digital platforms.",
-        "Motion Graphics":
-            "We design dynamic animations that bring ideas to life, simplify complex concepts, and captivate audiences with visually striking storytelling.",
-    };
+    "Branding & Identity":
+        "We create powerful brand identities that go beyond logos, shaping visuals, voice, and strategy to help your business stand out and connect with your audience.",
+
+    "Business Consulting & Scaling Solutions":
+        "We guide businesses from idea to growth, offering strategic insights, process optimization, and scalable solutions that help companies launch, adapt, and expand successfully.",
+
+    "UI UX Designing":
+        "We design intuitive, user-friendly, and visually engaging digital experiences that enhance usability, boost engagement, and turn visitors into loyal customers.",
+
+    "Web Development":
+        "We build fast, secure, and scalable websites tailored to your business needs, combining modern technology with seamless functionality to deliver powerful online experiences.",
+
+    "App Development":
+        "We create high-performance, user-centric mobile and web applications that combine sleek design with powerful functionality to drive engagement and business growth.",
+
+    "SEO (Search Engine Optimization)":
+        "We optimize your website to rank higher on search engines, increase organic traffic, and improve online visibility through technical SEO, on-page optimization, content strategy, and performance enhancements.",
+
+    "Digital Marketing & Strategy":
+        "We craft data-driven marketing strategies that boost your online presence and drive measurable growth through SEO, social media, and targeted campaigns.",
+
+    "Graphic Designing":
+        "We create eye-catching and professional visual designs, including social media creatives, marketing materials, branding assets, and digital graphics that strengthen your brand identity and leave a lasting impression.",
+
+    "Video Production":
+        "We produce high-quality videos and motion graphics that tell your brand's story, engage audiences, and create lasting impact across digital platforms.",
+
+    "Motion Graphics":
+        "We design dynamic animations that bring ideas to life, simplify complex concepts, and captivate audiences with visually striking storytelling.",
+};
     return desc[service];
 }
 
