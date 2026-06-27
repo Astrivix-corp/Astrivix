@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import Navbar from '../components/Navbar';
+import { useNavigate } from 'react-router-dom';
+import { X } from 'lucide-react';
 import { submitClientApplication } from '../utils/api';
 
 const ClientApplication = () => {
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         fullName: '',
         businessName: '',
@@ -161,9 +163,13 @@ const ClientApplication = () => {
 
     return (
         <div className="fixed inset-0 bg-[#E8E3D8] z-[10000] overflow-auto">
-            {/* Navbar */}
-            <Navbar currentPage="client-application" />
-
+            <button
+                onClick={() => navigate('/')}
+                className="fixed top-4 left-4 z-[10001] p-2 rounded-full bg-white/80 hover:bg-white text-gray-700 hover:text-gray-900 shadow-md transition-all duration-200"
+                aria-label="Exit"
+            >
+                <X className="w-5 h-5" />
+            </button>
             <div className="flex flex-col lg:flex-row min-h-screen">
                 {/* Image Section - Top on mobile, Left on desktop */}
                 <div className="w-full lg:w-[500px] xl:w-[600px] h-64 lg:h-auto flex-shrink-0">

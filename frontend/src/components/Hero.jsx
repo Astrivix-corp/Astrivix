@@ -28,6 +28,8 @@ const MOBILE_IMAGES = [
     'https://github.com/33binil/Pixel-Junkie-Updates/raw/main/frontend/public/home55.webp',
 ];
 
+let loaded = false;
+
 const Hero = () => {
     const navigate = useNavigate();
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -35,8 +37,9 @@ const Hero = () => {
     const [previousIndex, setPreviousIndex] = useState(null);
     const [showElements, setShowElements] = useState(false);
     const [mobileOpen, setMobileOpen] = useState(false);
-    const [imagesLoaded, setImagesLoaded] = useState(false);
+    const [imagesLoaded, setImagesLoaded] = useState(loaded);
     const images = isMobile ? MOBILE_IMAGES : DESKTOP_IMAGES;
+    const indexRef = useRef(0);
     const timerRef = useRef(null);
 
     useEffect(() => {
@@ -51,6 +54,7 @@ const Hero = () => {
     }, []);
 
     useEffect(() => {
+        if (loaded) return;
         const loadImage = (src) =>
             new Promise((resolve) => {
                 const img = new Image();
@@ -61,16 +65,18 @@ const Hero = () => {
 
         const initSlideshow = async () => {
             await Promise.all([...DESKTOP_IMAGES, ...MOBILE_IMAGES].map(loadImage));
+            loaded = true;
             setImagesLoaded(true);
             timerRef.current = setInterval(() => {
-                setPreviousIndex((prev) => currentIndex);
-                setCurrentIndex((prev) => (prev + 1) % images.length);
+                setPreviousIndex(() => indexRef.current);
+                indexRef.current = (indexRef.current + 1) % images.length;
+                setCurrentIndex(indexRef.current);
             }, 3000);
         };
 
         initSlideshow();
         return () => clearInterval(timerRef.current);
-    }, [images.length, currentIndex]);
+    }, [images.length]);
 
     if (!imagesLoaded) {
         return (
@@ -81,8 +87,6 @@ const Hero = () => {
             </div>
         );
     }
-
-    const nextIndex = (currentIndex + 1) % images.length;
 
     return (
         <div className="relative w-full h-screen overflow-hidden transition-all duration-500 ease-in-out">
