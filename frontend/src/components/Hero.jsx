@@ -137,7 +137,7 @@ const Hero = () => {
                             Career
                         </button>
                         <button
-                            onClick={() => navigate('/portfolio')}
+                            onClick={() => navigate('/portfolio-showcase')}
                             className="text-[clamp(0.9rem,1.2vw,1.2rem)] font-alata text-white hover:scale-110 transition-transform duration-300"
                         >
                             Portfolio
@@ -170,7 +170,7 @@ const Hero = () => {
                                     setTimeout(() => {
                                         if (item === 'Application Form') navigate('/client-application');
                                         else if (item === 'Career') navigate('/career');
-                                        else if (item === 'Portfolio') navigate('/portfolio');
+                                        else if (item === 'Portfolio') navigate('/portfolio-showcase');
                                         else {
                                             const section = document.getElementById(item.toLowerCase().replace(' ', ''));
                                             section?.scrollIntoView({ behavior: 'smooth' });

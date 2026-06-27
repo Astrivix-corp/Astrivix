@@ -47,7 +47,7 @@ export default function AboutUs() {
 
     return (
         <section
-            id="about"
+            id="aboutus"
             ref={sectionRef}
             className="relative w-full min-h-screen bg-transparent text-white"
         >

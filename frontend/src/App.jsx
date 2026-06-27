@@ -14,6 +14,7 @@ const ClientApplication = lazy(() => import('./components/ClientApplication'));
 const Privacy = lazy(() => import('./pages/Privacy'));
 const Terms = lazy(() => import('./pages/Terms'));
 const Portfolio = lazy(() => import('./pages/Portfolio'));
+const PortfolioEmbed = lazy(() => import('./pages/PortfolioEmbed'));
 
 function App() {
     return (
@@ -39,6 +40,9 @@ function App() {
                     <div className="min-h-screen">
                         <Portfolio />
                     </div>
+                } />
+                <Route path="/portfolio-showcase" element={
+                    <PortfolioEmbed />
                 } />
                 <Route path="/career" element={
                     <div className="min-h-screen">
