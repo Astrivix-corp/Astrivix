@@ -110,7 +110,7 @@ const Hero = () => {
             <div className="fixed top-0 left-0 right-0 z-50">
                 <div className="max-w-full mx-auto relative h-[10vh] px-[4vw] flex justify-between items-center">
                     <img
-                        src="/logo.jpg"
+                        src="/logo1.png"
                         alt="Logo"
                         className={`w-[80px] md:w-[100px] xl:w-[120px] h-auto transition-all duration-1000 ${showElements ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5'
                             }`}
